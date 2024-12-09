@@ -1,0 +1,21 @@
+---
+
+- name: Install cinder packages
+  apt:
+    name:
+      - cinder-api
+      - cinder-scheduler
+      - cinder-volume
+    state: present
+
+- name: start and enable cinder scheduler
+  service:
+    name: cinder-scheduler
+    state: started
+    enabled: yes
+
+- name: start and enable cinder volume
+  service:
+    name: cinder-volume
+    state: started
+    enabled: yes

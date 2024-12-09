@@ -1,0 +1,7 @@
+---
+
+- name: Install horizon package
+  apt:
+    name: openstack-dashboard
+    state: present
+

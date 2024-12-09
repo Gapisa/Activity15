@@ -1,0 +1,9 @@
+---
+
+- name: Install neutron on controller
+  hosts: controller
+  become: yes
+  roles:
+    - neutron
+    - horizon
+    - cinder

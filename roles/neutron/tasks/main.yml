@@ -1,0 +1,13 @@
+---
+
+- name: Install neutron packages
+  apt:
+    name:
+      - neutron-server
+    state: present
+
+- name: start and enable neutron packages
+  service:
+    name: neutron-server
+    state: started
+    enabled: yes
